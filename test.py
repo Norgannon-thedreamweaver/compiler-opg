@@ -10,19 +10,21 @@ stack=[]
 input = sys.argv[1]
 line = open(input,'r').readline()
 string = "#"+line.strip()+"#"
-print(string)
 strin=list(string)
 read_char=strin.pop(0)
 stack.append(read_char)
 read_char=strin.pop(0)
 while True:
+    if not(dic.has_key(read_char)):
+        print('E')
+        break
     if stack[-1] in VN:
         a=stack[-2]
     else:
         a=stack[-1]
     if a=='#' and read_char=='#':
         break
-
+    print(a+"--"+read_char)
     if mat[dic[a]][dic[read_char]]==-1:
         stack.append(read_char)
         print('I'+read_char)
