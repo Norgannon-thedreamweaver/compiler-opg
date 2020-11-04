@@ -60,6 +60,9 @@ while True:
         read_char=strin.pop(0)
         
     else:
+        if a=='(':
+            print('RE')
+            break
         print('E')
         break
 
