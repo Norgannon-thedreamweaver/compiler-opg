@@ -15,7 +15,7 @@ read_char=strin.pop(0)
 stack.append(read_char)
 read_char=strin.pop(0)
 while True:
-    if not(dic.has_key(read_char)):
+    if read_char not in dic.keys():
         print('E')
         break
     if stack[-1] in VN:
@@ -24,7 +24,6 @@ while True:
         a=stack[-1]
     if a=='#' and read_char=='#':
         break
-    print(a+"--"+read_char)
     if mat[dic[a]][dic[read_char]]==-1:
         stack.append(read_char)
         print('I'+read_char)
