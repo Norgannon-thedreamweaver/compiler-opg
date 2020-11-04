@@ -10,6 +10,7 @@ stack=[]
 input = sys.argv[1]
 line = open(input,'r').readline()
 string = "#"+line.strip()+"#"
+print(string)
 strin=list(string)
 read_char=strin.pop(0)
 stack.append(read_char)
